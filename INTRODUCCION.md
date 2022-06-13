@@ -93,3 +93,83 @@ Para comenzar a crear tu notebook, debes tener el siguiente software (programas)
 * Python
 * Visual Studio Code
 * Extensión Jupyter de Visual Studio Code
+
+## Instalando la extensión de Python
+
+Esta extensión permite ejecutar notebooks de Jupyter desde Visual Studio Code mediante un [Kernel](https://es.wikipedia.org/wiki/N%C3%BAcleo_(inform%C3%A1tica)). Un kernel en Visual Studio Code le ayuda a activar un entorno de Anaconda, por lo que puede ejecutar sus notebooks mediante la instalación de Python.
+
+En Visual Studio Code, en el panel de extensiones de la izquierda, busque Jupyter de Microsoft. Para instalar esta extensión, seleccione Instalar.
+
+![image](https://user-images.githubusercontent.com/91554777/173451818-b3d8d036-c81e-4fac-90bc-1b96591ad920.png)
+
+Ahora que tienes configurados los tres elementos del área de trabajo, puedes empezar a trabajar con los notebooks de Jupyter en Visual Studio Code.
+
+
+![image](https://user-images.githubusercontent.com/91554777/173451847-93594db1-dda3-409d-8ab3-b696b34459fd.png)
+
+La extensión Jupyter debe mostrar el archivo en blanco, con la opción de agregar código (python) y bloques Markdown (Un lenguaje de etiquetas, similar a html que hemos ya trabajado de manera básica).
+
+### Crear un elemento de tipo Markdown
+
+En la parte superior del notebook, verás dos opciones para crear dos tipos diferentes de bloques de contenido en el notebook: **Markdown** y **código ejecutable**.
+
+La primera tarea es crear un título de documento. En la parte superior de la interfaz del notebook de Visual Studio Code, selecciona el botón más (+) situado junto a Markdown. Aparecerá un cuadro. Agregue el siguiente Markdown al cuadro:
+
+`` # Taller de Python en PILARES``
+
+Selecciona la palomita para ver el resultado.
+
+![image](https://user-images.githubusercontent.com/91554777/173451765-f0734bd4-88d3-4d48-a38c-a9a0754def45.png)
+
+¡Acabas de nombrar tu notebook! Para ver cómo se representa este archivo Markdown, elige ejecutar todo desde la parte superior del notebook o la flecha pequeña a la izquierda del cuadro Markdown.`<h1>`
+
+### Ejecutar el notebook
+
+Ahora necesitas ejecutar tu notebook. Elige un kernel de la lista desplegable en la parte superior derecha. Es posible que tengas uno o varios núcleos para elegir, así que asegúrese de elegir un kernel de Python 3.
+
+
+### Crear código ejecutable
+
+Ahora puedes agregar algo de código al notebook. Agreguemos una forma de mostrar un widget para iniciar el notebook.
+
+Primero, debes instalar una biblioteca llamada ``ipywidgets``. Instala la biblioteca agregando un nuevo bloque de código debajo del bloque de título del notebook. Utilizando el administrador de paquetes de Python ``pip``, para instalar la biblioteca.
+
+``pip install ipywidgets``
+
+![image](https://user-images.githubusercontent.com/91554777/173451981-6eecb098-5b0b-4745-a962-49d2c8f4522d.png)
+
+Después de instalarlo, te pedirá que reinicies el kernel. Basta con dar clic en la sección señalada de amarillo para reiniciar el kernel.
+
+![image](https://user-images.githubusercontent.com/91554777/173452013-0cc65a48-bc49-41ca-9ba5-ca873cce0247.png)
+
+A continuación, crearemos un botón en el notebook que, cuando se presiona, muestra un mensaje.
+
+En un nuevo bloque de código, agrega el código siguiente:
+
+```
+import ipywidgets as widgets
+
+prueba = widgets.ToggleButton(
+    value=False,
+    description='Iniciar prueba',
+    button_style='success',
+    tooltip='prueba de instalacion',
+    icon='rocket'
+)
+
+output = widgets.Output()
+
+display(prueba, output)
+
+def on_value_change(change):
+    with output:
+        if change['new'] == True:
+            print("Prueba iniciada")
+        else:   
+            print("Prueba detenida")
+
+prueba.observe(on_value_change, names='value')
+```
+
+
+¿Qué está pasando aquí? Utilizamos la biblioteca ``ipywidget`` para crear un botón y éste escucha cuando hacemos un clic provocando que su valor cambie, imprimiendo el mensaje observado.
