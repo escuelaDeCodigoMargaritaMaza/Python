@@ -1,4 +1,8 @@
 # Python
+
+Objetivo General: El estudiantado empleará los conocimientos en lenguaje de programación Python en los
+procesos de reunión, análisis e interpretación de datos a través de prácticas y ejercicios de programación.
+
 Temario del taller en la Escuela de Código PILARES
 # TEMARIO TALLER ANALISTA DE DATOS JUNIOR
 I. Introducción al lenguaje de programación
