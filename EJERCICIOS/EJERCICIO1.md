@@ -32,11 +32,19 @@ Prueba tu aplicación
 Para probar el proyecto, ejecuta tu notebook. En la parte superior de vscode surgirá un cuadro de diálogo para que proporciones las distancias. Puede utilizar los datos de la tabla siguiente:
 
 Planeta	Y Distancia al sol
+
 Mercurio	57900000
+
 Venus	108200000
+
 Tierra	149600000
+
 Marte	227900000
+
 Júpiter	778600000
+
 Saturno	1433500000
+
 Urano	2872500000
+
 Neptuno	4495100000
