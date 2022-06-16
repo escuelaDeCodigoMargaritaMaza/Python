@@ -2,7 +2,7 @@ Realiza un cuaderno de Python en Jupiter con el nombre Ejercicio1.ipynb
 
 Dentro vaamos a resolver los siguientes problemas:
 
-1. Una línea de código que  muestre la fecha de hoy (el formato deberá ser: Hoy es ).
+1. Una línea de código que  muestre la fecha de hoy.
 
 2. Construir un convertidor de unidades de centimetros a metros (el formato del resultado deberá ser: X cm son igual a X metros, según el usuarios ingrese la cantidad a convertir).
 
