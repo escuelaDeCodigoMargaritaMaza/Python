@@ -3,6 +3,8 @@
 
 3.1 Ejercicio 1(2 puntos)
 
+Simplifica la expresión 5+{{(3+1)}^2}.
+
 
 3.2 Ejercicio 2 (2 puntos)
 
