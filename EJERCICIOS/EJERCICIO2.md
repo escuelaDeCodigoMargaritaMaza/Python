@@ -7,7 +7,7 @@ En este ejercicio, se utilizan variables que contienen datos clave sobre usuario
 ### Datos con los que vas a trabajar
 taller = "Escuela de Código"
 
-folio = 00003
+folio = 3
 
 nombre = "Juan"
 
@@ -22,7 +22,7 @@ nombre = "Juan"
 Datos muestra:
 
 taller = 'Huertos '
-gravedad  = 00034
+gravedad  = 34
 nombre = 'María'
 
 * La salida no muestra información sobre María. Todavía muestra información sobre la Juan. 
