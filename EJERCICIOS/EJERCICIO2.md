@@ -22,7 +22,9 @@ nombre = "Juan"
 Datos muestra:
 
 taller = 'Huertos '
-gravedad  = 34
+
+folio  = 34
+
 nombre = 'María'
 
 * La salida no muestra información sobre María. Todavía muestra información sobre la Juan. 
