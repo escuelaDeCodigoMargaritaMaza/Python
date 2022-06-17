@@ -6,7 +6,9 @@ En este ejercicio, se utilizan variables que contienen datos clave sobre usuario
 
 ### Datos con los que vas a trabajar
 taller = "Escuela de Código"
+
 folio = 00003
+
 nombre = "Juan"
 
 * Primero, crea un título para el texto. Debido a que este texto trata sobre la gravedad en la Tierra y la Luna, úsalo para crear un título significativo. Utiliza las variables en lugar de escribir.
