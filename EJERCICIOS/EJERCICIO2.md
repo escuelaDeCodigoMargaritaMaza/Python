@@ -11,7 +11,7 @@ folio = 3
 
 nombre = "Juan"
 
-* Primero, crea un título para el texto. Debido a que este texto trata sobre la gravedad en la Tierra y la Luna, úsalo para crear un título significativo. Utiliza las variables en lugar de escribir.
+* Primero, crea un título para el texto.  Utiliza las variables en lugar de escribir.
 
 * Ahora crea una plantilla de cadena multilínea para contener el resto de la información. 
 
