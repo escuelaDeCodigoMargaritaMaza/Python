@@ -6,7 +6,7 @@ y posteriormente muestre en pantalla cada elemento de la lista junto con su
 cuadrado y su cubo.
 Respuesta:
 
-###4.2 Ejercicio 2 (1.2 puntos)
+### 4.2 Ejercicio 2 (1.2 puntos)
 Crea una lista e inicializarla con 5 cadenas de caracteres leídas por teclado. Copia
 los elementos de la lista en otra lista pero en orden inverso, y muestra sus
 elementos por la pantalla.
