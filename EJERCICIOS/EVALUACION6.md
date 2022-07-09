@@ -52,8 +52,9 @@ Gracias, vuelva prontos
 Opción no válida, en caso de ingresar un número fuera de las opciones
 
 ## Ejercicio 2 (1.5 puntos)
-Mostrar en pantalla los N primero número primos. Se pide por teclado la cantidad
-de números primos que queremos mostrar.
+Se pide por teclado un número y nos imprime los números primos que hay previos a este número.
+
+Ejemplo: si ingresamos el 10 nos imprima del 1 a ese 10 cuales números son primos.
 
 
 ## Ejercicio 3 (1.5 puntos)
@@ -61,3 +62,7 @@ Una persona adquirió un producto para pagar en 20 meses. El primer mes pagó
 10 €, el segundo 20 €, el tercero 40 € y así sucesivamente. Realizar un algoritmo
 para determinar cuánto debe pagar mensualmente y el total de lo que pagó
 después de los 20 meses.
+
+Al finalizar los 20 meses pago en total:
+
+primer mes pago 10, segundo mes pago 20, tercer mes pago 30, cuarto mes pago 40, etc.
