@@ -13,7 +13,7 @@ coincide con la multiplicación calculada cuento un acierto, sino escribimos un
 mensaje de error mostrando el resultado correcto. Cuando salimos del bucle
 mostramos el número de aciertos.
 
-Ejemplo. imprime una multiplicacion (9 * 8 =  )por teclado se ingresa la respuesta, eso pasa 10 veces y al final nos iprime cuantas respuestas fueron correctas
+Ejemplo. imprime una multiplicacion (9 * 8 =  )por teclado se ingresa la respuesta, eso pasa 10 veces y al final nos imprime cuantas respuestas fueron correctas
 
 Recuerda el import random
 
