@@ -66,11 +66,9 @@ XIII. Excepciones
 
 XIV. Entrada Estándar rawInput
 
-XV. Salida Estándar rawInput
+XV. Módulos
 
-XVI. Módulos
-
-Instalación de un ambiente de desarrollo
+XVI. Instalación de un ambiente de desarrollo
 
 ## BIBLIOGRAFÍA BÁSICA
 
