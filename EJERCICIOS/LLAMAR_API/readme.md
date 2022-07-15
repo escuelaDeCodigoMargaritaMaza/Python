@@ -69,6 +69,10 @@ escribimos en el buscador computer vision y escogemos la opción del mrkeplace p
 
 ![image](https://user-images.githubusercontent.com/91554777/179118797-aeaa70f6-b8bc-408f-89fb-240d93a4a8f4.png)
 
+
+
+![image](https://user-images.githubusercontent.com/91554777/179118952-2be94ac7-b62b-4a1a-80a1-6e8e72f5233c.png)
+
 Despues de llenar los datos del nombre del recurso y crear un grupo de recursos, que es como una carpeta donde se guardarán los proyectos, adem{as del tipo de servicio, gratuito o de pago.
 
 Dspués de aceptar se habrá creado el recurso
@@ -80,8 +84,6 @@ Al ir al recurso
 ![image](https://user-images.githubusercontent.com/91554777/179119272-98db58c7-257d-422f-a66e-8a7e511542a2.png)
 
 
-
-![image](https://user-images.githubusercontent.com/91554777/179118952-2be94ac7-b62b-4a1a-80a1-6e8e72f5233c.png)
 
 
 vemos la dirección a la que se conectará buscando la función y la KEY necesaria para validar el ingreso
