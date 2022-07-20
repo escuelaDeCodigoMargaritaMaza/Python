@@ -109,3 +109,14 @@ salida
 salida
 
         float
+
+### Recopilar información
+Puede codificarlo para que el programa le diga al usuario que ingrese información. Guarde los datos introducidos en el programa y, a continuación, actúe en consecuencia.
+
+Para capturar información del usuario, utilice la función input()
+
+          print("Bienvenido al programa de bienvenida") 
+          name = input("Introduzca su nombre ") 
+          print("Saludos: " + name)
+
+
