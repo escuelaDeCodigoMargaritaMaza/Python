@@ -44,3 +44,68 @@ En otros lenguajes de programación, como C, tenemos también el tipo double, si
 La mayor parte de los lenguajes de programación siguen el mismo esquema para la representación interna. Pero como muchos sabréis esta tiene sus limitaciones, impuestas por el hardware.
 
 Por eso desde Python 2.4 contamos también con un nuevo tipo Decimal, para el caso de que se necesite representar fracciones de forma más precisa. Sin embargo, este tipo está fuera del alcance de este taller, y sólo es necesario para el ámbito de la programación científica y otros relacionados. Para aplicaciones normales podemos utilizar el tipo float sin miedo, como ha venido haciéndose desde hace años, aunque teniendo en cuenta que los números en coma flotante no son precisos (ni en este ni en otros lenguajes de programación). Para representar un número real en Python se escribe primero la parte entera, seguido de un punto y por último la parte decimal
+
+# VARIABLES
+Asignar un valor a una variable en Python, para asignar un valor (un dato) a una variable se utiliza el operador de asignación =.
+
+En la operación de asignación se ven involucradas tres partes:
+
+El operador de asignación = Un identificador o nombre de variable, a la izquierda del operador Un literal, una expresión, una llamada a una función o una combinación de todos ellos a la derecha del operador de asignación
+
+          # Asigna a la variable <a> el valor 1
+          a = 1
+
+          # Asigna a la variable <a> el resultado de la expresión 3 * 4
+          a = 3 * 4
+
+          # Asigna a la variable <a> la cadena de caracteres 'Pythonista'
+          a = 'Pythonista'
+        
+### Un programa Python
+Para crear un programa en Python, debes almacenarlo en un archivo. El archivo debe tener la extensión .py.
+
+La idea de un programa es hacer algo, llevar a cabo una tarea. Para que el programa haga algo, debe agregar instrucciones de código que realicen instrucciones. Una instrucción podría imprimir algún texto o calcular algo, por ejemplo. Un programa de ejemplo puede tener un aspecto similar al siguiente:
+
+      # program.py
+          sum = 1 + 2
+          print(sum)
+     
+sakida
+         
+       3
+
+### Ejecutar un programa
+
+Supongamos que has creado un programa que consta de instrucciones. Para ejecutarlo hay que invocar el programa ejecutable de Python, seguido del nombre del programa. Aquí hay un ejemplo de tal invocación:
+
+     python3 program.py
+
+### La función print()
+Una de las primeras cosas que es probable que hagas es imprimir en una consola. Una consola es una aplicación de línea de comandos que te permite interactuar con el sistema operativo. En la consola, puedes ejecutar comandos y programas. También puedes ingresar información y mostrar información como texto en la pantalla.
+
+Para escribir información en la consola, puedes utilizar la función e implementarla como función principal. Debido a que es una función central, tendrás acceso a ella si Python está instalado. Para usarla dale un argumento: print()
+
+      print('Hola usuarios PILARES')
+      Hola usuarios PILARES
+      suma = 5 + 5 
+          producto = suma * 2
+          print(producto)
+          
+salida
+
+       20
+       
+¿Cómo sabes qué tipo tiene algo? Si ve los datos asignados a la variable como se muestra en el código siguiente, puede detectarlos:
+
+        distancia_al_metro = 8.346 # Parece un decimal flotante
+
+        La otra forma es usar la función:type()
+
+        type(distancia_a_metro)
+
+        distancia_al_metro = 8.346
+        type(distancia_al_metro)
+        
+salida
+
+        float
