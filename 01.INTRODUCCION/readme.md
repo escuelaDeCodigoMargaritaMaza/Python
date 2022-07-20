@@ -126,3 +126,21 @@ Selecciona la palomita para ver el resultado.
 ### Ejecutar el notebook
 
 Ahora necesitas ejecutar tu notebook. Elige un kernel de la lista desplegable en la parte superior derecha. Es posible que tengas uno o varios núcleos para elegir, así que asegúrese de elegir un kernel de Python 3.
+
+## Google colab
+![image](https://user-images.githubusercontent.com/91554777/180096946-68797afb-2539-4d91-9caa-aee57f8534a3.png)
+
+
+Colaboratory, o "Colab" para abreviar, es un producto de Google Research. Permite a cualquier usuario escribir y ejecutar código arbitrario de Python en el navegador. Es especialmente adecuado para tareas de aprendizaje automático, análisis de datos y educación. Desde un punto de vista más técnico, Colab es un servicio de cuaderno alojado de Jupyter que no requiere configuración y que ofrece acceso sin coste adicional a recursos informáticos.
+
+### ¿Qué diferencia hay entre Jupyter y Colab?link
+Jupyter es el proyecto de código abierto en el que se basa Colab. Colab te permite usar y compartir cuadernos de Jupyter con otros usuarios sin tener que descargar, instalar ni ejecutar nada.
+
+### ¿Dónde se almacenan mis cuadernos? ¿Puedo compartirlos?link
+Todos los cuadernos de Colab se almacenan en Google Drive o puedes cargarlos desde GitHub. Los cuadernos de Colab se pueden compartir igual que los archivos de Documentos de Google y Hojas de cálculo de Google. Para hacerlo, haz clic en el botón Compartir que está situado en la parte superior derecha de todos los cuadernos de Colaboratory o sigue estas instrucciones para compartir archivos en Google Drive.
+
+## Python online
+
+Adicional a las opciones anteriores, también podemos usar en linea Python, hay varios sitios donde podemos acceder y hacer uso del lenguaje.
+
+https://replit.com/languages/python3
