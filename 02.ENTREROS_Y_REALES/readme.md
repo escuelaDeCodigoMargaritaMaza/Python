@@ -1,4 +1,7 @@
-En Python encontraremos dos tipos de datos
+## En Python encontraremos dos tipos de datos:
+
+* Tipos de datos básicos
+* Tipos de datos complejos (Colecciones) 
 
 ## Tipos de datos básicos
 Los tipos de datos básicos en Python son los siguientes:
