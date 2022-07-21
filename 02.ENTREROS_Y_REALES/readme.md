@@ -53,6 +53,70 @@ En el escenario de este módulo, deseas aceptar la entrada de un usuario. La ent
 
 Afortunadamente, Python proporciona utilidades para estas operaciones.
 
+### Convertir cadenas en números
+Python admite dos tipos principales de números: enteros (o ``int``) y coma flotante (o ``float``). La diferencia clave entre los dos es la existencia de un punto decimal; los enteros son números enteros, mientras que los floats contienen un valor decimal.
+
+Cuando conviertes cadenas en números, indicamos el tipo de número que deseamos crear. Debemos decidir si necesitamos un punto decimal. Se utiliza ``int`` para convertir a un número entero y ``float`` para convertir a un número de coma flotante.
+
+```
+demo_int = int('215')
+print(demo_int)
+```
+*Salida: 215*
+
+```
+demo_float = float('215.3')
+print(demo_float)
+```
+*Salida: 215.3*
+
+Si utilizas un valor no válido para cualquiera de los dos ``int`` o ``float``, obtendrás un error.
+
+### Valores absolutos
+
+Un valor absoluto en matemáticas es el número no negativo sin su signo. El uso de un valor absoluto puede ser útil en diferentes situaciones, incluido nuestro ejemplo de buscar determinar la distancia entre dos planetas. Considera las siguientes matemáticas:
+
+```
+a = 39 - 16
+b = 16 - 39
+```
+Observa que la diferencia entre las dos ecuaciones es que los números se invierten. Las respuestas son ``23`` y ``-23``, respectivamente. Cuando estás determinando la distancia entre dos planetas, el orden en el que ingresas los números no importa, porque la respuesta absoluta es la misma.
+
+Convertimos el valor negativo en su valor absoluto utilizando ``abs``. Si realiza la misma operación utilizando ``abs`` (e imprimes las respuestas), notarás que se muestra ``23`` para ambas ecuaciones.
+
+```
+print(abs(39 - 16))
+print(abs(16 - 39))
+```
+*Salida: 23, 23*
+
+### Redondeo
+La función de python incorporada llamada ``round`` también es útil. Usada para redondear al entero más cercano si el valor decimal ``.5`` es mayor o mayor, o hacia abajo si es menor que ``.5``. 
+
+```
+print(round(14.5))
+```
+*Salida: 15*
+
+### Biblioteca Math
+Python tiene bibliotecas para proporcionar operaciones y cálculos más avanzados. Una de las más comunes es la biblioteca ``math``. ``math`` te permite realizar el redondeo con ``floor`` y ``ceil``, proporcionar el valor de pi, y muchas otras operaciones. Veamos cómo usar esta biblioteca para redondear hacia arriba o hacia abajo.
+
+El redondeo de números permite quitar la parte decimal de un flotador. Puedes elegir redondear siempre hacia arriba al número entero más cercano usando ``ceil``, o hacia abajo usando ``floor``.
+
+```
+from math import ceil, floor
+
+round_up = ceil(12.5)
+print(round_up)
+
+round_down = floor(12.5)
+print(round_down)
+```
+*Salida: 13, 12*
+
+
+---
+
 # VARIABLES
 Asignar un valor a una variable en Python, para asignar un valor (un dato) a una variable se utiliza el operador de asignación =.
 
@@ -78,7 +142,7 @@ La idea de un programa es hacer algo, llevar a cabo una tarea. Para que el progr
           sum = 1 + 2
           print(sum)
      
-sakida
+salida
          
        3
 
