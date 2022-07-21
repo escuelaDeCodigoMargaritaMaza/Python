@@ -45,3 +45,27 @@ print(quotient)
 ```
 
 *Salida: 2.5*
+
+### Orden de funcionamiento (Jerarquía de Operaciones)
+
+Python respeta el orden de operación para las matemáticas. El orden de operación dicta que las expresiones deben evaluarse en el siguiente orden:
+
+* 1.- Paréntesis
+* 2.- Exponentes
+* 3.- Multiplicación y división
+* 4.- Suma y resta
+
+Observa cómo se evalúan los paréntesis antes de cualquier otra operación. Esto permite asegurarte de que el código se ejecuta de manera predecible y que su código sea más fácil de leer y mantener.
+
+Como resultado, es una buena práctica usar paréntesis incluso si el orden de operación se evaluaría de la misma manera sin ellos. En las siguientes dos líneas de código, la segunda es más comprensible porque el paréntesis es una indicación clara de qué operación se realizará primero.
+
+```
+result_1 = 1032 + 26 * 2
+result_2 = 1032 + (26 * 2)
+```
+
+*El resultado es el mismo en ambos casos - 1084*
+
+---
+
+
