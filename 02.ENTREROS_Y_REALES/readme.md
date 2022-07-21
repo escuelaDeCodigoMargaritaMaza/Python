@@ -45,6 +45,14 @@ La mayor parte de los lenguajes de programación siguen el mismo esquema para la
 
 Por eso desde Python 2.4 contamos también con un nuevo tipo Decimal, para el caso de que se necesite representar fracciones de forma más precisa. Sin embargo, este tipo está fuera del alcance de este taller, y sólo es necesario para el ámbito de la programación científica y otros relacionados. Para aplicaciones normales podemos utilizar el tipo float sin miedo, como ha venido haciéndose desde hace años, aunque teniendo en cuenta que los números en coma flotante no son precisos (ni en este ni en otros lenguajes de programación). Para representar un número real en Python se escribe primero la parte entera, seguido de un punto y por último la parte decimal
 
+## Trabajar con números en Python
+
+Más allá de la aritmética central, puedes hacer uso de otras operaciones con números. Es posible que debas realizar el redondeo o convertir cadenas en números.
+
+En el escenario de este módulo, deseas aceptar la entrada de un usuario. La entrada será una cadena en lugar de un número, por lo que deberás convertirla en un número. Además, el usuario puede introducir valores que le den una respuesta negativa, que no querrás mostrar. Es posible que debas convertir la respuesta a su valor absoluto (Recordemos que el valor absoluto hace refencia al valor sin signos, es decir sin negativo). 
+
+Afortunadamente, Python proporciona utilidades para estas operaciones.
+
 # VARIABLES
 Asignar un valor a una variable en Python, para asignar un valor (un dato) a una variable se utiliza el operador de asignación =.
 
