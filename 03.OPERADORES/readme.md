@@ -117,6 +117,9 @@ También, es posible encerrar una cadena entre triples comillas (simples o doble
       triple = “““primera linea
       esto se vera en otra linea”””
       
+      triple = '''primera linea
+      esto se vera en otra linea'''
+      
 También podriamos hacer esto mismo con el caracter especial \n
 
       triple = 'primera linea \n segunda linea'
