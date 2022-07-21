@@ -85,4 +85,73 @@ result_2 = 1032 + (26 * 2)
 
 ---
 
+# Boleanos.
+Una variable o dato de tipo booleano sólo puede tener dos valores: True (cierto) y False (falso). Estos valores son especialmente importantes para las expresiones condicionales y los bucles, como veremos más adelante.
+
+En realidad el tipo bool (el tipo de los booleanos) es una subclase del tipo int. Puede que esto no tenga mucho sentido para tí si no conoces los términos de la orientación a objetos, que veremos más adelante, aunque tampoco es nada importante. Estos son los distintos tipos de operadores con los que podemos trabajar con valores booleanos, los llamados operadores lógicos o condicionales.
+
+![image](https://user-images.githubusercontent.com/91554777/180104542-459468e0-31d9-4725-9b3c-0aaab7868835.png)
+
+# Operadores lógicos
+
+Estos son operadores que actúan sobre las representaciones en binario de los operandores. Por ejemplo:
+
+Si ves una operación como 3 & 2, lo que estás viendo es un and bit a bit entre los números binarios 11 y 10 (las representaciones en binario de 3 y 2).
+
+El operador and (&), del inglés “y”, devuelve 1 si el primer bit operando es 1 y el segundo bit operando es 1. Se devuelve 0 en caso contrario.
+
+El resultado de aplicar and bit a bit a 11 y 10 sería entonces el número binario 10, o lo que es lo mismo, 2 en decimal (el primer dígito es 1 para ambas cifras, mientras que el segundo es 1 sólo para una de ellas).
+
+El operador or (|), del inglés “o”, devuelve 1 si el primer operando es 1 o el segundo operando es 1.
+
+Para el resto de casos se devuelve 0. El operador xor u or exclusivo (^) devuelve 1 si uno de los operandos es 1 y el otro no lo es. El operador not (~), del inglés “no”, sirve para negar uno a uno cada bit; es decir, si el operando es 0, cambia a 1 y si es 1, cambia a 0.
+
+![image](https://user-images.githubusercontent.com/91554777/180104723-80dc040b-22d4-42aa-b2f4-831439e5a011.png)
+
+# Cadenas
+
+Las cadenas no son más que texto encerrado entre comillas simples(‘cadena’)o dobles (“cadena”). Dentro de las comillas se pueden añadir caracteres especiales escapándolos con \, como \n, el carácter de nueva línea, o \t, el de tabulación.
+
+También, es posible encerrar una cadena entre triples comillas (simples o dobles). De esta forma podremos escribir el texto en varias líneas, y al imprimir la cadena, se respetarán los saltos de línea que introdujimos
+
+      triple = “““primera linea
+      esto se vera en otra linea”””
+      
+También podriamos hacer esto mismo con el caracter especial \n
+
+      triple = 'primera linea \n segunda linea'
+      
+Las cadenas también admiten operadores como +, que funciona realizando una concatenación de las cadenas utilizadas como operandos y *, en la que se repite la cadena tantas veces como lo indique el número utilizado como segundo operando.
+
+      a = “uno”
+      b = “dos”
+      c = a + b
+      print(c)
+      
+salida
+
+    unodos
+
+    c = a * 3 
+    
+salida
+
+    unounouno
+
+Fechas
+Cuando estás creando programas, es probable que interactúes con las fechas. Una fecha en un programa generalmente significa tanto la fecha del calendario como la hora.
+
+Una fecha se puede utilizar en varias aplicaciones, como estos ejemplos:
+
+Archivo de copia de seguridad. Usar una fecha como parte del nombre de un archivo de copia de seguridad es una buena manera de indicar cuándo se realizó una copia de seguridad y cuándo debe realizarse nuevamente. Condición. Es posible que desee llevar una lógica específica cuando hay una fecha determinada. Métrica. Las fechas se utilizan para comprobar el rendimiento del código para, por ejemplo, medir el tiempo que se tarda en ejecutar una función. Para trabajar con una fecha, debe importar el módulo: date
+
+    from datetime import date
+
+A continuación, puede invocar las funciones con las que desea trabajar. Para obtener la fecha de hoy, puede llamar a la función: today()
+
+    date.today()
+
+Para mostrar la fecha en la consola, puede usar la función. La función toma muchos tipos de datos como entrada. Así es como puedes mostrar la fecha de hoy: print()
+
+    print(date.today())
 
