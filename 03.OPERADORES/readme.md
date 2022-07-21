@@ -2,6 +2,13 @@
 
 Por lo general, las matemáticas implican alrededor de cuatro operaciones principales: suma, resta, multiplicación y división. Python es compatible con estos cuatro operadores y algunos otros. Exploremos los operadores más comunes que usarás en tus programas.
 
+![image](https://user-images.githubusercontent.com/91554777/180104277-5d71b833-5f22-49f7-933a-46ed9a7803a5.png)
+
+
+Veamos ahora qué podemos hacer con nuestros números usando los operadores por defecto. 
+
+
+
 ### Adición (Suma)
 
 En python usamos ``+`` para indicar la adición. Usando ``+`` entre dos números los suma y proporciona el total.
@@ -45,6 +52,16 @@ print(quotient)
 ```
 
 *Salida: 2.5*
+
+Puede que tengas dudas sobre cómo funciona el operador de módulo, y cuál es la diferencia entre división y división entera.
+
+El operador de módulo no hace otra cosa que devolvernos el resto de la división entre los dos operandos.
+
+En el ejemplo, 7/2 sería 3, con 1 de resto, luego el módulo es 1.
+
+La diferencia entre división y división entera no es otra que la que indica su nombre.
+
+En la división el resultado que se devuelve es un número real, mientras que en la división entera el resultado que se devuelve es solo la parte entera. No obstante hay que tener en cuenta que si utilizamos dos operandos enteros, Python determinará que queremos que la variable resultado también sea un entero, por lo que el resultado de, por ejemplo, 3 / 2 y 3 // 2 sería el mismo: 1. Si quisiéramos obtener los decimales necesitaríamos que al menos uno de los operadores fuera un número real, bien indicando los decimales.
 
 ### Orden de funcionamiento (Jerarquía de Operaciones)
 
