@@ -39,7 +39,7 @@ for en Python:
 
     secuencia = [“uno”, “dos”, “tres”]
     for elemento in secuencia:
-    print elemento
+        print elemento
 
 Como hemos dicho los for se utilizan en Python para recorrer secuencias, por lo
 que vamos a utilizar un tipo secuencia, como es la lista, para nuestro ejemplo.
