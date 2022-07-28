@@ -11,8 +11,8 @@ cumpla una condición.
 
     edad = 0
     while edad < 18:
-    edad = edad + 1
-    print “Felicidades, tienes “ + str(edad)
+        edad = edad + 1
+        print “Felicidades, tienes “ + str(edad)
 
 La variable edad comienza valiendo 0. Como la condición de que edad es menor
 que 18 es cierta (0 es menor que 18), se entra en el bucle.
