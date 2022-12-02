@@ -158,3 +158,6 @@ Para mostrar la fecha en la consola, puede usar la función. La función toma mu
 
     print(date.today())
 
+Palabras reservadas de Python
+
+![image](https://user-images.githubusercontent.com/91554777/205217953-4bfd6096-b781-40d9-bfdf-dbfa595dbd07.png)
