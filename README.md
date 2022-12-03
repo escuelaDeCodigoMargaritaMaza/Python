@@ -81,3 +81,6 @@ https://docs.python.org/es/3/tutorial/index.html
 * Aprende Python en un fin de semana
 Muñoz, M. A., & Córcoles, C. S. (2018). Aprende Python en un fin de semana
 (Spanish Edition). Independently published.
+
+* funciones en python 
+https://docs.python.org/3/library/functions.html#abs
