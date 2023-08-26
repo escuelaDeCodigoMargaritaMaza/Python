@@ -53,3 +53,7 @@ En los Diccionarios cada elemento se compone de un par clave-valor, y para su de
     
     7512
     Análisis Numérico I
+
+
+
+https://colab.research.google.com/drive/1Q5NPPGU9ULLXhw1VYgoQc8e9X4qILbfV
