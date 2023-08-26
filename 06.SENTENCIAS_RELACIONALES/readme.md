@@ -375,3 +375,6 @@ Probamos la función pasando cualquier número de minutos:
 >>> secuencia(4, 14, 18)
 
 ```
+
+
+https://colab.research.google.com/drive/1nxCF0Ke5nzl2EwNhBZoo5YepihKPVu7A
