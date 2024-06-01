@@ -1,4 +1,4 @@
-#VERSION 1
+# VERSION 1
     
     nombre = ""
     secreto = 15
