@@ -49,36 +49,37 @@
 
 # VERSION 3
 
-        import time
-        
-        print('''-------------------------------------------
-        -------ADIVINA EL NÚMERO SECRETO-------------
-        ---------TIENES 5 OPORTUNIDADES--------------
-        ---------------------------------------------''')
-        time.sleep(5)
-        # Vamos a iniciar generando el numero secreto, para ello importamos random
-        import random
-        # Ahora vamos a generar ese número secreto
-        numero_secreto = random.randint(1,100)
-        
-        #Ahora crea las variables donde se almacenará e número que ingrese el usuario y otra con el número de oportunidades que tendrá de adivinar
-        num =int(input('Adivina el número secreto'))
-        opor = 1
-        
-        # Vamos a crear el ciclo que se ejecute mientras no se adivie el número y aun queden oportunidades de seguir jugando
-        # Recuerda crear una condición que evalue e informe al usuario si el número ingresado es mayor o menor al número secreto
-        while numero_secreto != num and opor < 6:
-          opor = opor + 1
-          if num < numero_secreto:
-            print(f'{num} es menor al número secreto')
+    import random
+    import time
+    nombre = ""
+    secreto = random.randint(1,100)
+    numeros_dados = []   #Snakecase para variables y funciones
+    numero_dado=0
+    atinado = False
+    oportunidades = 3
+    
+    
+    nombre =  input("Ingresa tu nombre:\n")
+    print(f'\n**************** {nombre} ********** Adivina el número secreto *************\n')
+    time.sleep(5)
+    
+    numero_dado = (int(input("Ingresa un número")))
+    numeros_dados.append(numero_dado)
+    while numero_dado != secreto and oportunidades > 1:
+          print(f'Has ingresado los números: {numeros_dados}')
+          oportunidades = oportunidades - 1  #oportunidades=-1
+          if numero_dado < numero_dado:
+            print(f'{numero_dado} es mayor al número secreto')
+            numero_dado =int(input('Adivina el número secreto'))
+            numeros_dados.append(numero_dado)
         
           else:
-            print(f'{num} es mayor al número secreto')
-            num =int(input('Adivina el número secreto'))
-        
-        
-        # Cuando el usuario le atine o se acaben sus oportunidades entrará a otra condicionante
-        if num == numero_secreto:
-          print(f'felicidades!!!!! has atinado al número en {opor} oportunidades')
-        else:
-          print(f'lástima!!!!! se terminaron tus oportunidades, el número secreto era {numero_secreto}')
+            print(f'{numero_dado} es menor al número secreto')
+            numero_dado =int(input('Adivina el número secreto'))
+            numeros_dados.append(numero_dado)
+    
+    # Cuando el usuario le atine o se acaben sus oportunidades entrará a otra condicionante
+    if numero_dado == secreto:
+      print(f'felicidades!!!!!{nombre} has atinado al número en {oportunidades} oportunidades')
+    else:
+      print(f'lástima!!!!! {nombre }se terminaron tus oportunidades, el número secreto era {secreto}')
