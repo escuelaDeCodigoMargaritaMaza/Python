@@ -68,7 +68,7 @@
     while numero_dado != secreto and oportunidades > 1:
           print(f'Has ingresado los números: {numeros_dados}')
           oportunidades = oportunidades - 1  #oportunidades=-1
-          if numero_dado < numero_dado:
+          if secreto < numero_dado:
             print(f'{numero_dado} es mayor al número secreto')
             numero_dado =int(input('Adivina el número secreto'))
             numeros_dados.append(numero_dado)
