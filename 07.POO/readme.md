@@ -211,4 +211,3 @@ Deleter : Se encarga de interceptar cuando es borrado. (delete = borrar)
 doc :  Recibirá una cadena para documentar el atributo. (doc = documentación)
 
 
-https://colab.research.google.com/drive/1EfeXvaBo3ejRY6uoCcShXkFV8yqPENJ-
