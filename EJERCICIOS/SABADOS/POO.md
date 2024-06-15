@@ -64,4 +64,29 @@
         print(f"Sexo: {sexos[i]}")
         print(f"Edad: {edades[i]}")
 
-    
+
+# POO
+
+        #creacion de la clase
+        class Usuario():
+            def __init__(self,nombre,telefono,correo,sexo,edad):
+                self.nombre= nombre
+                self.telefono= telefono
+                self.correo= correo
+                self.sexo = sexo
+                self.edad = edad
+        
+            def mostrar(self):
+              print( f'''************DATOS DEL USUARIO **********
+              nombre : {self.nombre}
+              telefono: {self.telefono}
+              correo: {self.correo}
+              sexo: {self.sexo}
+              edad: {self.edad}''')
+        
+        
+        #instanciamos el objeto
+        usuario1 = Usuario("David","54545454","sadsa@gsd","m",25)    
+        #accedo a los atributos
+        #print(usuario1.nombre)
+        usuario1.mostrar()
