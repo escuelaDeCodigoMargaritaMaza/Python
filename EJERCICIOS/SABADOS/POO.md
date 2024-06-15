@@ -67,26 +67,36 @@
 
 # POO
 
-        #creacion de la clase
-        class Usuario():
-            def __init__(self,nombre,telefono,correo,sexo,edad):
-                self.nombre= nombre
-                self.telefono= telefono
-                self.correo= correo
-                self.sexo = sexo
-                self.edad = edad
-        
-            def mostrar(self):
-              print( f'''************DATOS DEL USUARIO **********
-              nombre : {self.nombre}
-              telefono: {self.telefono}
-              correo: {self.correo}
-              sexo: {self.sexo}
-              edad: {self.edad}''')
-        
-        
+    #creacion de la clase
+    class Usuario():
+        def __init__(self,nombre,telefono,correo,sexo,edad):
+            self.nombre= nombre
+            self.telefono= telefono
+            self.correo= correo
+            self.sexo = sexo
+            self.edad = edad
+    
+        def mostrar(self):
+          print( f'''************DATOS DEL USUARIO **********
+          nombre : {self.nombre}
+          telefono: {self.telefono}
+          correo: {self.correo}
+          sexo: {self.sexo}
+          edad: {self.edad}''')
+    
+        def modificar(self):
+            print("Ingrese los datos del usuario a modificar:")
+            self.nombre = input("Nombre: ")
+            self.telefono = input("Teléfono: ")
+            self.correo_electronico = input("Correo Electrónico: ")
+            self.sexo = input("Sexo: ")
+            self.edad = int(input("Edad: "))
+    
+    
         #instanciamos el objeto
         usuario1 = Usuario("David","54545454","sadsa@gsd","m",25)    
         #accedo a los atributos
         #print(usuario1.nombre)
+        usuario1.mostrar()
+        usuario1.modificar()
         usuario1.mostrar()
