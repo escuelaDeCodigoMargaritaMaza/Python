@@ -7,7 +7,7 @@
     sexo = input("Ingrese su sexo (M/F): ")
     edad = input("Ingrese su edad: ")
     
-    //Imprimir los datos del usuario
+    #Imprimir los datos del usuario
     print("\nDatos del usuario:")
     print(f"Nombre: {nombre}")
     print(f"Teléfono: {telefono}")
@@ -17,14 +17,14 @@
 
 ## usando listas
 
-    //Solicitar datos al usuario y añadirlos a la lista
+    #Solicitar datos al usuario y añadirlos a la lista
     datos_usuario.append(input("Ingrese su nombre: "))
     datos_usuario.append(input("Ingrese su teléfono: "))
     datos_usuario.append(input("Ingrese su correo electrónico: "))
     datos_usuario.append(input("Ingrese su sexo (M/F): "))
     datos_usuario.append(input("Ingrese su edad: "))
     
-    //Imprimir los datos del usuario
+    #Imprimir los datos del usuario
     print("\nDatos del usuario:")
     print(f"Nombre: {datos_usuario[0]}")
     print(f"Teléfono: {datos_usuario[1]}")
@@ -34,7 +34,7 @@
 
 ## usando listas para cada dato
 
-    //Listas para almacenar los datos de múltiples usuarios
+    #Listas para almacenar los datos de múltiples usuarios
     nombres = []
     telefonos = []
     correos_electronicos = []
@@ -42,19 +42,19 @@
     edades = []
     
     while True:
-        //Solicitar datos al usuario y añadirlos a las listas correspondientes
+        #Solicitar datos al usuario y añadirlos a las listas correspondientes
         nombres.append(input("Ingrese su nombre: "))
         telefonos.append(input("Ingrese su teléfono: "))
         correos_electronicos.append(input("Ingrese su correo electrónico: "))
         sexos.append(input("Ingrese su sexo (M/F): "))
         edades.append(input("Ingrese su edad: "))
         
-        //Preguntar al usuario si desea agregar otro registro
+        #Preguntar al usuario si desea agregar otro registro
         continuar = input("¿Desea agregar otro usuario? (s/n): ").lower()
         if continuar != 's':
             break
     
-    //Imprimir los datos de todos los usuarios
+    #Imprimir los datos de todos los usuarios
     print("\nDatos de los usuarios:")
     for i in range(len(nombres)):
         print(f"\nUsuario {i + 1}:")
