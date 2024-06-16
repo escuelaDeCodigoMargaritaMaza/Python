@@ -134,21 +134,21 @@ Jinja2 es un motor de plantillas para Python que se utiliza en Flask para render
 * En tu directorio templates, crea un archivo saludo.html.
 * Añade el siguiente contenido, que incluye sintaxis de Jinja2:
 
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Saludo</title>
-    </head>
-    <body>
-        <h1>Hola, {{ nombre }}!</h1>
-        {% if edad >= 18 %}
-            <p>Eres mayor de edad.</p>
-        {% else %}
-            <p>Eres menor de edad.</p>
-        {% endif %}
-    </body>
-    </html>
+      <!DOCTYPE html>
+      <html lang="es">
+      <head>
+          <meta charset="UTF-8">
+          <title>Saludo</title>
+      </head>
+      <body>
+          <h1>Hola, {{ nombre }}!</h1>
+          {% if edad >= 18 %}
+              <p>Eres mayor de edad.</p>
+          {% else %}
+              <p>Eres menor de edad.</p>
+          {% endif %}
+      </body>
+      </html>
 
 * Aquí, {{ nombre }} es una variable que se pasará desde la función de vista en Flask.
 * {% if %} y {% else %} son declaraciones condicionales que controlan qué parte del template se renderiza basado en la variable edad
