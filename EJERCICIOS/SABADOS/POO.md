@@ -100,3 +100,8 @@
         usuario1.mostrar()
         usuario1.modificar()
         usuario1.mostrar()
+
+
+## HERENCIA, POLIMORFISMO Y ENCAPSULAMIENTO
+
+https://colab.research.google.com/drive/15F7WtuAFIE8xfFTA4Aqj883Ne0GUIGD-?usp=sharing
