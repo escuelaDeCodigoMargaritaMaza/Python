@@ -180,25 +180,25 @@ Creación de un formulario: Vamos a crear un formulario simple que solicite el n
           
 Ruta para manejar el formulario: Ahora, en tu aplicación Flask, crea una ruta que maneje la solicitud POST del formulario. Por ejemplo:
 
-from flask import Flask, render_template, request
-from formulario import PersonaForm  # Importa tu formulario
-
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'tu_clave_secreta'
-
-@app.route('/formulario', methods=['GET', 'POST'])
-def formulario():
-    form = PersonaForm()
-    if form.validate_on_submit():
-        # Procesa los datos del formulario (por ejemplo, guárdalos en una base de datos)
-        nombre = form.nombre.data
-        edad = form.edad.data
-        # Realiza alguna acción con los datos
-        return f'Hola, {nombre}! Tienes {edad} años.'
-    return render_template('formulario.html', form=form)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+        from flask import Flask, render_template, request
+        from formulario import PersonaForm  # Importa tu formulario
+        
+        app = Flask(__name__)
+        app.config['SECRET_KEY'] = 'tu_clave_secreta'
+        
+        @app.route('/formulario', methods=['GET', 'POST'])
+        def formulario():
+            form = PersonaForm()
+            if form.validate_on_submit():
+                # Procesa los datos del formulario (por ejemplo, guárdalos en una base de datos)
+                nombre = form.nombre.data
+                edad = form.edad.data
+                # Realiza alguna acción con los datos
+                return f'Hola, {nombre}! Tienes {edad} años.'
+            return render_template('formulario.html', form=form)
+        
+        if __name__ == '__main__':
+            app.run(debug=True)
 
 Plantilla HTML para el formulario: Crea un archivo HTML llamado formulario.html en tu carpeta de plantillas. Aquí tienes un ejemplo básico:
 
