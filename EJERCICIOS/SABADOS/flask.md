@@ -162,3 +162,59 @@ Jinja2 es un motor de plantillas para Python que se utiliza en Flask para render
 
 *  Esta ruta acepta un nombre y una edad como parte de la URL y las pasa al template saludo.html.
 *  inicia tu servidor Flask y visita http://127.0.0.1:5000/greet/Juan/20.
+
+## Manejo de formularios con Flask-WTF.
+Instalación de Flask-WTF: Antes de comenzar, asegúrate de tener Flask y Flask-WTF instalados. Si no lo has hecho, puedes instalar Flask-WTF con el siguiente comando:
+
+    pip install -U Flask-WTF
+
+Creación de un formulario: Vamos a crear un formulario simple que solicite el nombre y la edad de una persona. Crearemos una clase PersonaForm que herede de FlaskForm y defina los campos necesarios: (formulario.py)
+
+      from flask_wtf import FlaskForm
+      from wtforms import StringField, IntegerField, SubmitField
+      
+      class PersonaForm(FlaskForm):
+          nombre = StringField('Nombre Completo')
+          edad = IntegerField('Edad')
+          enviar = SubmitField('Enviar')
+          
+Ruta para manejar el formulario: Ahora, en tu aplicación Flask, crea una ruta que maneje la solicitud POST del formulario. Por ejemplo:
+
+from flask import Flask, render_template, request
+from formulario import PersonaForm  # Importa tu formulario
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'tu_clave_secreta'
+
+@app.route('/formulario', methods=['GET', 'POST'])
+def formulario():
+    form = PersonaForm()
+    if form.validate_on_submit():
+        # Procesa los datos del formulario (por ejemplo, guárdalos en una base de datos)
+        nombre = form.nombre.data
+        edad = form.edad.data
+        # Realiza alguna acción con los datos
+        return f'Hola, {nombre}! Tienes {edad} años.'
+    return render_template('formulario.html', form=form)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+Plantilla HTML para el formulario: Crea un archivo HTML llamado formulario.html en tu carpeta de plantillas. Aquí tienes un ejemplo básico:
+
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <title>Formulario</title>
+      </head>
+      <body>
+          <h1>Ingresa tus datos:</h1>
+          <form method="POST">
+              {{ form.hidden_tag() }}
+              <p>{{ form.nombre.label }} {{ form.nombre }}</p>
+              <p>{{ form.edad.label }} {{ form.edad }}</p>
+              <p>{{ form.enviar }}</p>
+          </form>
+      </body>
+      </html>
+
