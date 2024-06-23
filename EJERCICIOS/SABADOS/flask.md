@@ -121,9 +121,9 @@ Flask es un microframework de código abierto para Python, conocido por su simpl
   * Crea una ruta dinámica
   * Añade una nueva función con una variable en la ruta:
     
-      @app.route('/user/<username>')
-      def user(username):
-      return f'¡Hola, {username}!'
+        @app.route('/user/<username>')
+        def user(username):
+        return f'¡Hola, {username}!'
 
 * Visita http://127.0.0.1:5000/user/tu_nombre en el navegador, reemplazando “tu_nombre” con cualquier nombre que quieras.
 
