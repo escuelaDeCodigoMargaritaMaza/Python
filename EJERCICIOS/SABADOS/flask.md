@@ -156,9 +156,9 @@ Jinja2 es un motor de plantillas para Python que se utiliza en Flask para render
 
   En tu app.py, crea una nueva ruta que pase variables al template:
 
-    @app.route('/greet/<nombre>/<int:edad>')
-    def saludar(nombre, edad):
-    return render_template('saludo.html', nombre=nombre, edad=edad)
+      @app.route('/greet/<nombre>/<int:edad>')
+      def saludar(nombre, edad):
+      return render_template('saludo.html', nombre=nombre, edad=edad)
 
 *  Esta ruta acepta un nombre y una edad como parte de la URL y las pasa al template saludo.html.
 *  inicia tu servidor Flask y visita http://127.0.0.1:5000/greet/Juan/20.
