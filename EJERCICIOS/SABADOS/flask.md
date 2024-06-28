@@ -130,39 +130,44 @@ Flask es un microframework de código abierto para Python, conocido por su simpl
 ## Templates con Jinja2 en Flask:
 Jinja2 es un motor de plantillas para Python que se utiliza en Flask para renderizar vistas. Permite escribir código Python dentro de los archivos HTML para generar contenido dinámico.
 
-### Crea un template con Jinja2:
-* En tu directorio templates, crea un archivo saludo.html.
-* Añade el siguiente contenido, que incluye sintaxis de Jinja2:
+## VERSION 1
+        //app.py
+        from flask import Flask
+        from flask import render_template
+        app = Flask(__name__)
+        
+        @app.route('/')
+        def hola_mundo():
+            return render_template('index.html')
+        
+        @app.route('/registro')
+        def saludo():
+            return 'Registro'
+        
+        
+        if __name__ == '__main__':
+            app.run(debug=True)
 
-      <!DOCTYPE html>
-      <html lang="es">
-      <head>
-          <meta charset="UTF-8">
-          <title>Saludo</title>
-      </head>
-      <body>
-          <h1>Hola, {{ nombre }}!</h1>
-          {% if edad >= 18 %}
-              <p>Eres mayor de edad.</p>
-          {% else %}
-              <p>Eres menor de edad.</p>
-          {% endif %}
-      </body>
-      </html>
 
-* Aquí, {{ nombre }} es una variable que se pasará desde la función de vista en Flask.
-* {% if %} y {% else %} son declaraciones condicionales que controlan qué parte del template se renderiza basado en la variable edad
-* Renderiza el template desde una ruta:
-
-  En tu app.py, crea una nueva ruta que pase variables al template:
-
-      @app.route('/greet/<nombre>/<int:edad>')
-      def saludar(nombre, edad):
-      return render_template('saludo.html', nombre=nombre, edad=edad)
-
-*  Esta ruta acepta un nombre y una edad como parte de la URL y las pasa al template saludo.html.
-*  inicia tu servidor Flask y visita http://127.0.0.1:5000/greet/Juan/20.
-
+        //index.html
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Bienvenido</title>
+        </head>
+        <body>
+            <h1 style="color: cornflowerblue; font-size: 2rem; text-align: center;">BIENVENIDO A FLESK</h1>
+            <form action="" style="text-align: center;">
+                Correo: <input type="email" name="correo" id="correo"><br>
+                Contraseña: <input type="password" name="pasword" id="pasword"><br><br>
+                <button>Entrar</button>
+                <button>Registrar</button>
+            </form>
+        </body>
+        </html>
+        
 ## Manejo de formularios con Flask-WTF.
 Instalación de Flask-WTF: Antes de comenzar, asegúrate de tener Flask y Flask-WTF instalados. Si no lo has hecho, puedes instalar Flask-WTF con el siguiente comando:
 
