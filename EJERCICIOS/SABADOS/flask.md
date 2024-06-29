@@ -133,6 +133,7 @@ Jinja2 es un motor de plantillas para Python que se utiliza en Flask para render
 ## VERSION 1
 
 app.py
+
         from flask import Flask
         from flask import render_template
         app = Flask(__name__)
