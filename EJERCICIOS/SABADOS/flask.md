@@ -160,6 +160,33 @@ index.html
             
         </body>
         </html>
-        
+         
+.
+
+app = Flask(__name__) se utiliza para crear una instancia de la aplicación Flask. Aquí está el significado de cada parte:
+
+Flask: Es una clase proporcionada por el framework Flask. Representa una aplicación web y proporciona funcionalidades para manejar solicitudes HTTP, rutas, vistas, plantillas, etc.
+
+app: Es el nombre que le das a tu instancia de la aplicación. Puedes elegir cualquier nombre que desees.
+
+__name__: Es una variable especial en Python que se refiere al nombre del módulo o script actual. Cuando ejecutas un archivo Python directamente (como un script), Python asigna el valor __main__ a __name__. Por lo tanto, en este caso, Flask(__name__) crea una instancia de la aplicación Flask y la asocia con el módulo actual.
+
+En resumen, app = Flask(__name__) crea una aplicación Flask que puedes usar para definir rutas, vistas y otras funcionalidades web. Si tienes más preguntas o necesitas más detalles, no dudes en preguntar. 
+
+        if __name__ == '__main__'::
+Esta línea verifica si el script de Python está siendo ejecutado directamente (es decir, no importado como un módulo en otro script).
+Cuando ejecutas un archivo Python, el intérprete asigna el valor especial __main__ al atributo __name__.
+
+Por lo tanto, esta condición se cumple cuando ejecutas el archivo directamente desde la línea de comandos o desde un entorno de desarrollo.
+app.run(debug=True):
+
+app se refiere a la instancia de la aplicación Flask que has creado previamente.
+
+run() es un método de Flask que inicia el servidor web local para manejar las solicitudes HTTP.
+
+El argumento debug=True habilita el modo de depuración. Cuando está activado:
+* Se muestra información detallada sobre errores en el navegador.
+* El servidor se reinicia automáticamente cuando modificas el código.
+* No se debe usar en producción debido a posibles problemas de seguridad.
 
 
