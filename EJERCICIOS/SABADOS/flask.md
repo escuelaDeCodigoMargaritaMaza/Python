@@ -192,7 +192,7 @@ El argumento debug=True habilita el modo de depuración. Cuando está activado:
 
 # VERSION 2
 
-##app.py
+## app.py
 
       from flask import Flask, render_template
       
