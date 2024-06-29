@@ -156,13 +156,8 @@ index.html
             <title>Bienvenido</title>
         </head>
         <body>
-            <h1 style="color: cornflowerblue; font-size: 2rem; text-align: center;">BIENVENIDO A FLESK</h1>
-            <form action="" style="text-align: center;">
-                Correo: <input type="email" name="correo" id="correo"><br>
-                Contraseña: <input type="password" name="pasword" id="pasword"><br><br>
-                <button>Entrar</button>
-                <button>Registrar</button>
-            </form>
+            <h1 style="color: cornflowerblue; font-size: 2rem; text-align: center;">BIENVENIDO A MI APLICACION FLESK</h1>
+            
         </body>
         </html>
         
