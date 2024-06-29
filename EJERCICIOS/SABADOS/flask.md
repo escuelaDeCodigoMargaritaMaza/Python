@@ -131,7 +131,8 @@ Flask es un microframework de código abierto para Python, conocido por su simpl
 Jinja2 es un motor de plantillas para Python que se utiliza en Flask para renderizar vistas. Permite escribir código Python dentro de los archivos HTML para generar contenido dinámico.
 
 ## VERSION 1
-        //app.py
+
+app.py
         from flask import Flask
         from flask import render_template
         app = Flask(__name__)
@@ -140,16 +141,12 @@ Jinja2 es un motor de plantillas para Python que se utiliza en Flask para render
         def hola_mundo():
             return render_template('index.html')
         
-        @app.route('/registro')
-        def saludo():
-            return 'Registro'
-        
-        
         if __name__ == '__main__':
             app.run(debug=True)
 
 
-        //index.html
+index.html
+
         <!DOCTYPE html>
         <html lang="en">
         <head>
