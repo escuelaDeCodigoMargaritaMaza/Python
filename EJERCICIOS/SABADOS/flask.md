@@ -190,3 +190,52 @@ El argumento debug=True habilita el modo de depuración. Cuando está activado:
 * No se debe usar en producción debido a posibles problemas de seguridad.
 
 
+# VERSION 2
+
+##app.py
+
+      from flask import Flask, render_template
+      
+      app = Flask(__name__)
+      app.config['SECRET_KEY'] = 'tu_palabra_secreta'
+      
+      
+      @app.route('/')
+      def inicio():
+          return render_template('index.html')
+      
+      
+      @app.route('/login', methods=['POST'])
+      def login():
+          return "Acceso correcto"
+      
+      @app.route('/registro', methods=['POST','GET'])
+      def registro():
+          return "Registrate"
+      
+      
+      if __name__ == '__main__':
+          app.run(debug=True)
+
+## index.html
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio</title>
+    </head>
+    <body>
+        <h1 style="color:blue; text-align: center;">BIENVENVENIDO(A) A MI APP DE FLASK</h1>
+        <form action="/login" method="POST">
+            Correo: <input type="email" name="email"><br>
+            Contraseña: <input type="password" name="contra"><br>
+            <input type="submit" value="Entrar"> 
+        </form>
+        <form action="/registro" method="POST">
+            <input type="submit" value="registrar">
+        </form>
+        
+    </body>
+    </html>
