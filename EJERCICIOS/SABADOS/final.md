@@ -1,85 +1,149 @@
-# VERSION 1
-    
-    nombre = ""
-    secreto = 15
-    numero_dado = 0   #Snakecase para variables y funciones
-    atinado = False
-    oportunidades = 3
-    
-    
-    nombre = input("Ingresa tu nombre:\n")
-    print(f'\n**************** {nombre} ********** Adivina el número secreto *************\n')
-    numeroDado=int(input("Ingresa tú  número: "))
-    
-    print(f'{secreto} es el número secreto, tú ingresaste {numero_dado}, atinaste? {secreto == numero_dado}')
+1. Crea una carpeta para el proyecto, dentro crea tres archivos python: main, palabras y figuras
 
-# VERSION 2
+2. En palabras crea una lista con varias palabras de tu elección
 
-        import random
-        nombre = ""
-        secreto = random.randint(1,100)
-        numeros_dados = []   #Snakecase para variables y funciones
-        atinado = False
-        oportunidades = 3
-        
-        
-        nombre =  input("Ingresa tu nombre:\n")
-        print(f'\n**************** {nombre} ********** Adivina el número secreto *************\n')
-        #append es método
-        numeros_dados.append(int(input("Ingresa un número")))
-        numeros_dados.append(int(input("Ingresa otro número")))
-        numeros_dados.append(int(input("Ingresa otro número")))
-        print(f'los número dados son: {numeros_dados}')
-        
-        
-        #len es funsion
-        print(f'{secreto} es el número secreto, tú ingresaste {len(numeros_dados)} números, que fueron: {numeros_dados} atinaste? {secreto in numeros_dados}')
-        
-        
-        indice=int(input("qué indice quieres borrar"))
-        borrado = numeros_dados.pop(indice)
-        print(numeros_dados)
+3. En figuras crea una lista con las figuras del ahora
 
-
-        numeros_dados.append(int(input("Ingresa otro número")))
-        print(numeros_dados.sort(reverse=True))
+          +----+
+           |    |
+                |
+                |
+                |
+                |
+                ==========
         
-        print(f'el número más aldo dado fue: {max(numeros_dados)} y el menor fue: {min(numeros_dados)}')
+            +----+
+            |    |
+            O    |
+                |
+                |
+                |
+                ==========
+        
+            +----+
+            |    |
+            O    |
+            |    |
+                |
+                |
+                ==========
+        
+            +----+
+            |    |
+            O    |
+           /|    |
+                 |
+                 |
+                 ==========
+        
+            +----+
+            |    |
+            O    |
+           /|\   |
+                 |
+                 |
+                 ==========
+        
+            +----+
+            |    |
+            O    |
+           /|\   |
+            |    |
+                 |
+                 ==========
+        
+            +----+
+            |    |
+            O    |
+           /|\   |
+            |    |
+           /     |
+                 ==========
+        
+            +----+
+            |    |
+            O    |
+           /|\   |
+            |    |
+           / \   |
+                 ==========
 
+4. En main importa radom, y las dos listas de cada archivo.
 
-# VERSION 3
+5. Implementa una funcion (palabra_secreta()) para seleccionar una palabra aleatoria de la lista, esto via el indice.
 
-    import random
-    import time
-    nombre = ""
-    secreto = random.randint(1,100)
-    numeros_dados = []   #Snakecase para variables y funciones
-    numero_dado=0
-    atinado = False
-    oportunidades = 3
+       def palabra_secreta():
+            indice = random.randint(0,len(palabras) - 1)
+            return palabras[indice]
+
+7. Crea otra función(visual()), esta tendrá argumentos: palabra_a_buscar y las oportunidades, la función tendrá una condicionante simple, si las oportunidades son mayor a 0 invocará a otra función (encabezado()) que muestre el encabezado del juego, más adelante se creaará, también esta función imprimira la figura actual (indice en la lista), la palabra_a_buscar representada por guiones, estás más adelante serán trabajadas, por ahora solo se establecen en las funciones por el nombre de las variables
+
+          def visual(palabra_buscar, oportunidades):
+                if oportunidades > 0:
+                    encabezado()
+                print(figuras[oportunidades])
+                print('')
+                print(palabra_buscar)
+                print('\n----------------------------------------------')
+
+8. Crea otra función(iniciar_juego()) que inicia el juego esta inicializa la palabra = palabra_secreta(), Crea una lista llamada palabra_buscar con guiones para representar la palabra oculta (palabra_buscar = ['-'] * len(palabra)) e inicia oportunidades en 0.
+
+       def iniciar_juego():
+        palabra = palabra_secreta()
+        palabra_buscar = ['-'] * len(palabra)
+        oportunidades = 0
+
+10. Mientras el jugador no haya adivinado la palabra o haya agotado las oportunidades (while True):
     
+          while True:
+                visual(palabra_buscar, oportunidades)
+                letra_ingresada = str(input('Ingresa una letra: '))
+                letras_escritas = []
     
-    nombre =  input("Ingresa tu nombre:\n")
-    print(f'\n**************** {nombre} ********** Adivina el número secreto *************\n')
-    time.sleep(5)
+    Llama a visual(palabra_buscar, oportunidades) para mostrar la interfaz del juego.
+    Pide al jugador que ingrese una letra y la guarda en letra_ingresada.
+    Verifica si la letra esta ya en las se han ingresado con un for
+   
+         for i in range(len(palabra)):
+            if palabra[i] == letra_ingresada:
+                letras_escritas.append(i)
+   
+    Si no se encuentra la letra, incrementa oportunidades.
+   
+        if len(letras_escritas) == 0:
+            oportunidades += 1
     
-    numero_dado = (int(input("Ingresa un número")))
-    numeros_dados.append(numero_dado)
-    while numero_dado != secreto and oportunidades > 1:
-          print(f'Has ingresado los números: {numeros_dados}')
-          oportunidades = oportunidades - 1  #oportunidades=-1
-          if secreto < numero_dado:
-            print(f'{numero_dado} es mayor al número secreto')
-            numero_dado =int(input('Adivina el número secreto'))
-            numeros_dados.append(numero_dado)
-        
-          else:
-            print(f'{numero_dado} es menor al número secreto')
-            numero_dado =int(input('Adivina el número secreto'))
-            numeros_dados.append(numero_dado)
+   Si el jugador ha agotado las oportunidades, muestra un mensaje de derrota con la palabra secreta, dentro del mismo if
+
+          if oportunidades == 7:
+                visual(palabra_buscar, oportunidades)
+                print('')
+                print(f'Lo siento {self.nombre} has perdido la palabra era : {palabra}')
+                break
+   
+   Si se encontraron letras coincidentes, Actualiza palabra_buscar en las posiciones correspondientes con la letra 
+   ingresada y  Reinicia la lista  letras_escritas
+
+        else:
+                for i in letras_escritas:
+                    palabra_buscar[i]= letra_ingresada
+                letras_escritas = []
+   
+   genera una excepción para que si al buscar un caracter - no lo encuentre nos diga que hemos ganado
+
+       try:
+            palabra_buscar.index('-')
+        except ValueError:
+            print('')
+            print(f'Felicidades,has adivinado la palabra {palabra}!')
+            break
+11. Define la función encabezado()   Esta función muestra el título y las instrucciones del juego.
     
-    # Cuando el usuario le atine o se acaben sus oportunidades entrará a otra condicionante
-    if numero_dado == secreto:
-      print(f'felicidades!!!!!{nombre} has atinado al número en {oportunidades} oportunidades')
-    else:
-      print(f'lástima!!!!! {nombre }se terminaron tus oportunidades, el número secreto era {secreto}')
+        def encabezado():
+            print('=================================')
+            print('======JUEGO DEL AHORCADO=========')
+            print('A D I V I N A la palabra secreta')
+            print('(Palabras relacionadas al taller)')
+            print('=================================')
+
+12. Invoca las funciones encabezado() y iniciar_juego()
