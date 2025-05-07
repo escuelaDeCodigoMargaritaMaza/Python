@@ -2,6 +2,8 @@ https://colab.research.google.com/drive/1j1HqBy0m-cgKmBXC7GR61ZGnx7nV8aav?usp=sh
 
 https://colab.research.google.com/drive/1I9ShCIMaZIvBwwz_TziOF_BAMmXHxTfM?usp=sharing
 
+https://docs.google.com/document/d/1a0dFzTfy0q0XjE56MnpYjML3B7-aVNgOGAiXgO2AaUs/edit?usp=sharing
+
 ## 1.1.¿Qué es Python?
 Python es un lenguaje de programación creado por Guido van Rossum a
 principios de los años 90 cuyo nombre está inspirado en el grupo de cómicos
